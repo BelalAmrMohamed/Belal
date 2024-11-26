@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belal Amr's Developments</title>
+    <link rel="icon" href="https://blogger.googleusercontent.com/img/a/AVvXsEiNLae39z6SO9DdILvTCws-oQ3DFEESeuE5wlhO3GyyImXWpRcYz35teSWpHsk8qHo6rCPLivbO4m2LzOopUcyXbegZN7_f1uh64ZHZI_Irdl81DYY7I5K-a0rzyRfkhkhheZJqbHJ0EsN-i-IuJoEmoiaM5348HNUTGjD0yXke5BUxdP-9hTOqieYCdZI" type="image/jpeg">
+    <style>
+        :root {
+            --theme-color: #333; /* Dark theme */
+            --background-light: #B0E0E6; /* Light blue for the box */
+            --text-dark: #333;
+            --text-light: #fff;
+        }
+
+        .light-theme {
+            --theme-color: #fff;
+            --text-dark: #333;
+            --text-light: #333;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--theme-color);
+            color: var(--text-light);
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+
+        header {
+            text-align: center;
+            background-color: var(--background-light);
+            padding: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+            color: var(--text-dark);
+        }
+
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .logo-container img {
+            width: 200px;
+            animation: fadeIn 0.5s ease-in-out forwards;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        nav a {
+            padding: 14px 20px;
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
+            background-color: #17202A;
+            border-radius: 5px;
+            margin: 5px;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            background-color: #575757;
+        }
+
+        main {
+            text-align: center;
+            padding: 20px;
+        }
+
+        #toggleThemeButton {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #17202A;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: white;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        #toggleThemeButton:hover {
+            background-color: #17202A;
+        }
+
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button id="toggleThemeButton" onclick="toggleTheme()">☀️</button>
+    <header>
+        <h1>Belal Amr's Developments</h1>
+        <div class="logo-container">
+            <img id="themeLogo" src="https://blogger.googleusercontent.com/img/a/AVvXsEiPLt1hB7SxxVP38W9ckVtry62D4e_DgDE1kN1vwV-KqBbDD_KK8vyaMD-gxL9Kh_QzHjVTv9Hat3O1xGV2SPxgb1s7h0TixFe-l1np_gd_chkV80v6PWKTg3ngKJPICzfMLzJyGJReq85xbWZWToS7UnecIMXndjqSBickq_dtijsr0ZSs7ybVI2QSRT8=w1684-h1069-p-k-no-nu" alt="Your Logo">
+        </div>
+    </header>
+    <nav>
+        <a href="https://belalamrmohamed.github.io/Rail-fence-cypher/" target="_blank">Rail Fence Cipher</a>
+        <a href="https://belalamrmohamed.github.io/Row-Transposition/" target="_blank">Row Transposition Cipher</a>
+        <a href="https://belalamrmohamed.github.io/playfair-cypher/" target="_blank">Playfair Cipher</a>
+        <a href="https://belalamrmohamed.github.io/caesar-cypher/" target="_blank">Caesar Cipher</a>
+        <a href="https://belalamrmohamed.github.io/BelalAmr/" target="_blank">Numbering Systems</a>
+    </nav>
+    <main>
+        <h2>Choose a website</h2>
+        <p>Click on any of the links above to open them in a new window.</p>
+    </main>
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            const toggleButton = document.getElementById('toggleThemeButton');
+            const themeLogo = document.getElementById('themeLogo');
+
+            themeLogo.style.animation = 'fadeOut 0.5s ease-in-out'; // Fade out animation
+            setTimeout(() => {
+                body.classList.toggle('light-theme');
+                toggleButton.textContent = body.classList.contains('light-theme') ? '🌙' : '☀️';
+
+                // Update logo source
+                themeLogo.src = body.classList.contains('light-theme') 
+                    ? "https://blogger.googleusercontent.com/img/a/AVvXsEiPLt1hB7SxxVP38W9ckVtry62D4e_DgDE1kN1vwV-KqBbDD_KK8vyaMD-gxL9Kh_QzHjVTv9Hat3O1xGV2SPxgb1s7h0TixFe-l1np_gd_chkV80v6PWKTg3ngKJPICzfMLzJyGJReq85xbWZWToS7UnecIMXndjqSBickq_dtijsr0ZSs7ybVI2QSRT8=w1684-h1069-p-k-no-nu"
+                    : "https://blogger.googleusercontent.com/img/a/AVvXsEhqAvT_vRn0HsBqWdBAZNwnKtDZscBH6IYekigFaqn8_3UrRV2mBJzip55pQmRHWPRwwTAZJA33Qni_PfBO7rDJ4UYVlsEm7fwqKBPKz4OhE1N6JKufd98NlsddxJQ8325rdZwTpzjxgZVdHOKmbphESxqxxyD4nVzQqx8Oe273zfcGMVbuGEiJWc4QkfM";
+
+                themeLogo.style.animation = 'fadeIn 0.5s ease-in-out'; // Fade in animation
+            }, 500); // Match duration with fadeOut
+        }
+    </script>
+</body>
+</html>
