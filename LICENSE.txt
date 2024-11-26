@@ -1,0 +1,29 @@
+Copyright (c) 2024 Belal Amr
+
+This website and all associated files are protected by copyright law. The following terms apply to your use of the website and its content:
+
+License
+
+The content, code, design, and associated files are made available under the following terms:
+
+1. Personal Use: You may use, modify, and distribute this website for personal, non-commercial purposes, provided that you retain this license and copyright notice in all copies of the software or content.
+
+
+2. Commercial Use: You may not use the website or its content for commercial purposes without explicit permission from the copyright holder, Belal Amr.
+
+
+3. Modification: You are allowed to modify the content for personal or educational purposes, but you must ensure that any modified content still includes this original copyright and license notice.
+
+
+4. No Warranty: The website and its contents are provided "as is," without warranty of any kind, either express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose, or non-infringement.
+
+
+5. Attribution: You must give appropriate credit to the original creator, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
+
+
+
+Additional Terms
+
+This website may include third-party libraries, components, or resources. These components may be subject to different licensing terms. It is your responsibility to ensure compliance with the licensing terms of any third-party software or resources.
+
+If you wish to obtain a commercial license or seek permission for any use not covered in this license, please contact Belal Amr at [Your Contact Email].
