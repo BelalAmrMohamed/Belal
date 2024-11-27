@@ -1,159 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Belal Amr's Developments</title>
-    <link rel="icon" href="https://blogger.googleusercontent.com/img/a/AVvXsEiNLae39z6SO9DdILvTCws-oQ3DFEESeuE5wlhO3GyyImXWpRcYz35teSWpHsk8qHo6rCPLivbO4m2LzOopUcyXbegZN7_f1uh64ZHZI_Irdl81DYY7I5K-a0rzyRfkhkhheZJqbHJ0EsN-i-IuJoEmoiaM5348HNUTGjD0yXke5BUxdP-9hTOqieYCdZI" type="image/jpeg">
-    <style>
-        :root {
-            --theme-color: #333; /* Dark theme */
-            --background-light: #B0E0E6; /* Light blue for the box */
-            --text-dark: #333;
-            --text-light: #fff;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belal Amr's Developments</title>
+  <link rel="icon" href="https://blogger.googleusercontent.com/img/a/AVvXsEiNLae39z6SO9DdILvTCws-oQ3DFEESeuE5wlhO3GyyImXWpRcYz35teSWpHsk8qHo6rCPLivbO4m2LzOopUcyXbegZN7_f1uh64ZHZI_Irdl81DYY7I5K-a0rzyRfkhkhheZJqbHJ0EsN-i-IuJoEmoiaM5348HNUTGjD0yXke5BUxdP-9hTOqieYCdZI" type="image/jpeg">
+  <style>
+    :root {
+      --theme-color: #333;
+      --background-light: #B0E0E6;
+      --text-dark: #333;
+      --text-light: #fff;
+    }
 
-        .light-theme {
-            --theme-color: #fff;
-            --text-dark: #333;
-            --text-light: #333;
-        }
+    .light-theme {
+      --theme-color: #fff;
+      --text-dark: #333;
+      --text-light: #333;
+    }
 
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--theme-color);
-            color: var(--text-light);
-            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-        }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--theme-color);
+      color: var(--text-light);
+      transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+      text-align: center;
+    }
 
-        header {
-            text-align: center;
-            background-color: var(--background-light);
-            padding: 20px;
-        }
+    header {
+      background-color: var(--background-light);
+      padding: 20px;
+    }
 
-        header h1 {
-            margin: 0;
-            font-size: 2rem;
-            color: var(--text-dark);
-        }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      color: var(--text-dark);
+    }
 
-        .logo-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 20px 0;
-        }
+    .logo-container {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px auto;
+      height: 200px; /* Reserve space for the logos */
+    }
 
-        .logo-container img {
-            width: 200px;
-            animation: fadeIn 0.5s ease-in-out forwards;
-        }
+    .logo-container img {
+      position: absolute;
+      width: 200px;
+      animation: fadeIn 0.5s ease-in-out forwards;
+    }
 
-        nav {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin: 20px 0;
-        }
+    .logo-container img.hidden {
+      animation: fadeOut 0.5s ease-in-out forwards;
+    }
 
-        nav a {
-            padding: 14px 20px;
-            text-decoration: none;
-            color: white;
-            font-size: 1rem;
-            background-color: #17202A;
-            border-radius: 5px;
-            margin: 5px;
-            display: inline-block;
-        }
+    nav {
+      margin: 20px;
+    }
 
-        nav a:hover {
-            background-color: #575757;
-        }
+    .section {
+      margin: 10px 0;
+    }
 
-        main {
-            text-align: center;
-            padding: 20px;
-        }
+    .section button {
+      padding: 10px;
+      font-size: 1.2rem;
+      background-color: #17202A;
+      color: white;
+      border: none;
+      cursor: pointer;
+      width: 60%;
+      text-align: center;
+      margin: auto;
+    }
 
-        #toggleThemeButton {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background-color: #17202A;
-            border: none;
-            padding: 10px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1.5rem;
-            color: white;
-            transition: background-color 0.3s ease-in-out;
-        }
+    .section button:hover {
+      background-color: #575757;
+    }
 
-        #toggleThemeButton:hover {
-            background-color: #17202A;
-        }
+    .links {
+      display: none;
+      margin: 10px 0;
+    }
 
-        @keyframes fadeOut {
-            from {
-                opacity: 1;
-            }
-            to {
-                opacity: 0;
-            }
-        }
+    .links a {
+      display: block;
+      padding: 8px;
+      color: var(--text-dark);
+      text-decoration: none;
+      background-color: var(--background-light);
+      border-radius: 5px;
+      margin: 5px auto;
+      width: 60%;
+    }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-    </style>
+    .links a:hover {
+      background-color: #ccc;
+    }
+
+    #toggleThemeButton {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #17202A;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1.5rem;
+      color: white;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    #toggleThemeButton:hover {
+      background-color: #17202A;
+      color: white;
+    }
+
+    @keyframes fadeOut {
+      from {
+        opacity: 1;
+      }
+      to {
+        opacity: 0;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
 </head>
 <body>
-    <button id="toggleThemeButton" onclick="toggleTheme()">☀️</button>
-    <header>
-        <h1>Belal Amr's Developments</h1>
-        <div class="logo-container">
-            <img id="themeLogo" src="https://blogger.googleusercontent.com/img/a/AVvXsEhqAvT_vRn0HsBqWdBAZNwnKtDZscBH6IYekigFaqn8_3UrRV2mBJzip55pQmRHWPRwwTAZJA33Qni_PfBO7rDJ4UYVlsEm7fwqKBPKz4OhE1N6JKufd98NlsddxJQ8325rdZwTpzjxgZVdHOKmbphESxqxxyD4nVzQqx8Oe273zfcGMVbuGEiJWc4QkfM" alt="Your Logo">
-        </div>
-    </header>
-    <nav>
+  <button id="toggleThemeButton" onclick="toggleTheme()">🌙</button>
+
+  <header>
+    <h1>Belal Amr's Developments</h1>
+    <div class="logo-container">
+      <img id="themeLogo" class="hidden" src="https://blogger.googleusercontent.com/img/a/AVvXsEiPLt1hB7SxxVP38W9ckVtry62D4e_DgDE1kN1vwV-KqBbDD_KK8vyaMD-gxL9Kh_QzHjVTv9Hat3O1xGV2SPxgb1s7h0TixFe-l1np_gd_chkV80v6PWKTg3ngKJPICzfMLzJyGJReq85xbWZWToS7UnecIMXndjqSBickq_dtijsr0ZSs7ybVI2QSRT8=w1684-h1069-p-k-no-nu">
+      <img id="defaultLogo" src="https://blogger.googleusercontent.com/img/a/AVvXsEhqAvT_vRn0HsBqWdBAZNwnKtDZscBH6IYekigFaqn8_3UrRV2mBJzip55pQmRHWPRwwTAZJA33Qni_PfBO7rDJ4UYVlsEm7fwqKBPKz4OhE1N6JKufd98NlsddxJQ8325rdZwTpzjxgZVdHOKmbphESxqxxyD4nVzQqx8Oe273zfcGMVbuGEiJWc4QkfM">
+    </div>
+  </header>
+
+  <nav>
+    <div class="section">
+      <button onclick="toggleLinks('games')">Games</button>
+      <div class="links" id="games">
+        <a href="https://belalamrmohamed.github.io/GuessTheWord/" target="_blank">Guess the Word</a>
+        <a href="https://belalamrmohamed.github.io/GuessTheNumber/" target="_blank">Guess the Number</a>
+        <a href="https://belalamrmohamed.github.io/RockpaperScissors/" target="_blank">Rock Paper Scissors</a>
+      </div>
+    </div>
+    <div class="section">
+      <button onclick="toggleLinks('calculators')">Calculators</button>
+      <div class="links" id="calculators">
+        <a href="https://belalamrmohamed.github.io/BelalAmr/" target="_blank">Numbering Systems</a>
+      </div>
+    </div>
+    <div class="section">
+      <button onclick="toggleLinks('ciphers')">Ciphers</button>
+      <div class="links" id="ciphers">
         <a href="https://belalamrmohamed.github.io/Rail-fence-cypher/" target="_blank">Rail Fence Cipher</a>
         <a href="https://belalamrmohamed.github.io/Row-Transposition/" target="_blank">Row Transposition Cipher</a>
         <a href="https://belalamrmohamed.github.io/playfair-cypher/" target="_blank">Playfair Cipher</a>
         <a href="https://belalamrmohamed.github.io/caesar-cypher/" target="_blank">Caesar Cipher</a>
-        <a href="https://belalamrmohamed.github.io/BelalAmr/" target="_blank">Numbering Systems</a>
-    </nav>
-    <main>
-        <h2>Choose a website</h2>
-        <p>Click on any of the links above to open them in a new window.</p>
-    </main>
-    <script>
-        function toggleTheme() {
-            const body = document.body;
-            const toggleButton = document.getElementById('toggleThemeButton');
-            const themeLogo = document.getElementById('themeLogo');
+      </div>
+    </div>
+  </nav>
 
-            themeLogo.style.animation = 'fadeOut 0.5s ease-in-out'; // Fade out animation
-            setTimeout(() => {
-                body.classList.toggle('light-theme');
-                toggleButton.textContent = body.classList.contains('light-theme') ? '🌙' : '☀️';
+  <main>
+    <h2>Choose a website</h2>
+    <p>I will keep developing more sites.</p>
+  </main>
 
-                // Update logo source
-                themeLogo.src = body.classList.contains('light-theme') 
-                    ? "https://blogger.googleusercontent.com/img/a/AVvXsEiPLt1hB7SxxVP38W9ckVtry62D4e_DgDE1kN1vwV-KqBbDD_KK8vyaMD-gxL9Kh_QzHjVTv9Hat3O1xGV2SPxgb1s7h0TixFe-l1np_gd_chkV80v6PWKTg3ngKJPICzfMLzJyGJReq85xbWZWToS7UnecIMXndjqSBickq_dtijsr0ZSs7ybVI2QSRT8=w1684-h1069-p-k-no-nu"
-                    : "https://blogger.googleusercontent.com/img/a/AVvXsEhqAvT_vRn0HsBqWdBAZNwnKtDZscBH6IYekigFaqn8_3UrRV2mBJzip55pQmRHWPRwwTAZJA33Qni_PfBO7rDJ4UYVlsEm7fwqKBPKz4OhE1N6JKufd98NlsddxJQ8325rdZwTpzjxgZVdHOKmbphESxqxxyD4nVzQqx8Oe273zfcGMVbuGEiJWc4QkfM";
+  <script>
+    function toggleTheme() {
+      const body = document.body;
+      const toggleButton = document.getElementById('toggleThemeButton');
+      const themeLogo = document.getElementById('themeLogo');
+      const defaultLogo = document.getElementById('defaultLogo');
 
-                themeLogo.style.animation = 'fadeIn 0.5s ease-in-out'; // Fade in animation
-            }, 500); // Match duration with fadeOut
+      body.classList.toggle('light-theme');
+      toggleButton.textContent = body.classList.contains('light-theme') ? '☀️' : '🌙';
+
+      if (body.classList.contains('light-theme')) {
+        defaultLogo.classList.add('hidden');
+        themeLogo.classList.remove('hidden');
+      } else {
+        themeLogo.classList.add('hidden');
+        defaultLogo.classList.remove('hidden');
+      }
+    }
+
+    function toggleLinks(id) {
+      const allLinks = document.querySelectorAll('.links');
+      allLinks.forEach(section => {
+        if (section.id !== id) {
+          section.style.display = 'none';
         }
-    </script>
+      });
+      const currentSection = document.getElementById(id);
+      currentSection.style.display = currentSection.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
 </body>
 </html>
