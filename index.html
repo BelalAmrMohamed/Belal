@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Belal Amr's Developments</title>
   <link rel="icon" href="https://blogger.googleusercontent.com/img/a/AVvXsEiNLae39z6SO9DdILvTCws-oQ3DFEESeuE5wlhO3GyyImXWpRcYz35teSWpHsk8qHo6rCPLivbO4m2LzOopUcyXbegZN7_f1uh64ZHZI_Irdl81DYY7I5K-a0rzyRfkhkhheZJqbHJ0EsN-i-IuJoEmoiaM5348HNUTGjD0yXke5BUxdP-9hTOqieYCdZI" type="image/jpeg">
-  <style>
+<style>
     :root {
       --theme-color: #333;
-      --background-light: #B0E0E6;
+      --background-light: #FF6F61;
       --text-dark: #333;
       --text-light: #fff;
     }
@@ -35,9 +35,10 @@
     }
 
     header h1 {
+      font-size: 2.5rem;
       margin: 0;
-      font-size: 2rem;
-      color: var(--text-dark);
+      font-weight: bold;
+      animation: slideInDown 1s ease-out;
     }
 
     .logo-container {
@@ -46,7 +47,8 @@
       justify-content: center;
       align-items: center;
       margin: 20px auto;
-      height: 200px; /* Reserve space for the logos */
+      height: 200px;
+      /* Reserve space for the logos */
     }
 
     .logo-container img {
@@ -60,62 +62,82 @@
     }
 
     nav {
-      margin: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
     }
 
     .section {
-      margin: 10px 0;
+      margin-bottom: 20px;
+      text-align: center;
     }
 
     .section button {
-      padding: 10px;
-      font-size: 1.2rem;
-      background-color: #17202A;
-      color: white;
+      font-size: 1.5rem;
+      padding: 12px 20px;
       border: none;
+      border-radius: 8px;
+      background: var(--primary-color);
+      color: var(--theme-dark-text);
       cursor: pointer;
-      width: 60%;
-      text-align: center;
-      margin: auto;
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease-in-out;
     }
 
     .section button:hover {
-      background-color: #575757;
+      background: var(--hover-color);
+      transform: scale(1.05);
     }
 
     .links {
       display: none;
-      margin: 10px 0;
+      animation: fadeIn 1s forwards;
     }
 
     .links a {
-      display: block;
-      padding: 8px;
-      color: var(--text-dark);
-      text-decoration: none;
-      background-color: var(--background-light);
-      border-radius: 5px;
-      margin: 5px auto;
-      width: 60%;
-    }
+
+  display: block;
+
+  font-size: 1rem;
+
+  margin: 8px 0;
+
+  padding: 10px;
+
+  text-decoration: none;
+
+  color: var(--theme-dark-text);
+  
+
+  border-radius: 6px;
+
+  transition: all 0.3s ease-in-out;
+
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+
+}
 
     .links a:hover {
-      background-color: #ccc;
-    }
+  transform: translateY(-3px);
+}
 
-    #toggleThemeButton {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      background-color: #17202A;
-      border: none;
-      padding: 10px;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 1.5rem;
-      color: white;
-      transition: background-color 0.3s ease-in-out;
-    }
+
+#toggleThemeButton {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  padding: 10px;
+  font-size: 1.2rem;
+  background-color: #17202A;
+  color: var(--theme-dark-text);
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: background 0.3s ease;
+  z-index: 1000; /* Ensure it's on top */
+}
 
     #toggleThemeButton:hover {
       background-color: #17202A;
