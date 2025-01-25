@@ -1,258 +1,276 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Belal Amr's Developments</title>
-  <link rel="icon" href="https://blogger.googleusercontent.com/img/a/AVvXsEiNLae39z6SO9DdILvTCws-oQ3DFEESeuE5wlhO3GyyImXWpRcYz35teSWpHsk8qHo6rCPLivbO4m2LzOopUcyXbegZN7_f1uh64ZHZI_Irdl81DYY7I5K-a0rzyRfkhkhheZJqbHJ0EsN-i-IuJoEmoiaM5348HNUTGjD0yXke5BUxdP-9hTOqieYCdZI" type="image/jpeg">
-<style>
-    :root {
-      --theme-color: #333;
-      --background-light: #FF6F61;
-      --text-dark: #333;
-      --text-light: #fff;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belal Amr's Web Development Portfolio</title>
+    <meta name="description" content="Showcasing web development projects and innovations by Belal Amr">
+    <link rel="icon" href="https://blogger.googleusercontent.com/img/a/AVvXsEiNLae39z6SO9DdILvTCws-oQ3DFEESeuE5wlhO3GyyImXWpRcYz35teSWpHsk8qHo6rCPLivbO4m2LzOopUcyXbegZN7_f1uh64ZHZI_Irdl81DYY7I5K-a0rzyRfkhkhheZJqbHJ0EsN-i-IuJoEmoiaM5348HNUTGjD0yXke5BUxdP-9hTOqieYCdZI" type="image/jpeg">
+    
+    <style>
+        :root {
+            --theme-color-dark: #1a1a2e;
+            --background-light: #FF6F61;
+            --text-dark: #333;
+            --text-light: #e0e0e0;
+            --primary-color: #4A90E2;
+            --hover-color: #3A80D2;
+            --accent-color: #2C3E50;
+            --transition-speed: 0.3s;
+        }
 
-    .light-theme {
-      --theme-color: #fff;
-      --text-dark: #333;
-      --text-light: #333;
-    }
+        .light-theme {
+            --theme-color-dark: #f4f4f4;
+            --text-dark: #333;
+            --text-light: #333;
+        }
 
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: var(--theme-color);
-      color: var(--text-light);
-      transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-      text-align: center;
-    }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-    header {
-      background-color: var(--background-light);
-      padding: 20px;
-    }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--theme-color-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+            transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+        }
 
-    header h1 {
-      font-size: 2.5rem;
-      margin: 0;
-      font-weight: bold;
-      animation: slideInDown 1s ease-out;
-    }
+        header {
+            background: linear-gradient(135deg, var(--background-light), var(--accent-color));
+            padding: 2rem;
+            text-align: center;
+        }
 
-    .logo-container {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 20px auto;
-      height: 200px;
-      /* Reserve space for the logos */
-    }
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 2rem auto;
+            max-width: 250px;
+        }
 
-    .logo-container img {
-      position: absolute;
-      width: 200px;
-      animation: fadeIn 0.5s ease-in-out forwards;
-    }
+        .logo-container img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            transition: transform var(--transition-speed) ease;
+        }
 
-    .logo-container img.hidden {
-      animation: fadeOut 0.5s ease-in-out forwards;
-    }
+        .logo-container img:hover {
+            transform: scale(1.05) rotate(5deg);
+        }
 
-    nav {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
-    }
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            padding: 2rem;
+            background-color: rgba(0,0,0,0.1);
+        }
 
-    .section {
-      margin-bottom: 20px;
-      text-align: center;
-    }
+        .section {
+            width: 300px;
+            background-color: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+        }
 
-    .section button {
-      font-size: 1.5rem;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 8px;
-      background: var(--primary-color);
-      color: var(--theme-dark-text);
-      cursor: pointer;
-      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-      transition: all 0.3s ease-in-out;
-    }
+        .section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
 
-    .section button:hover {
-      background: var(--hover-color);
-      transform: scale(1.05);
-    }
+        .section button {
+            width: 100%;
+            padding: 1rem;
+            font-size: 1.2rem;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background-color var(--transition-speed) ease;
+        }
 
-    .links {
-      display: none;
-      animation: fadeIn 1s forwards;
-    }
+        .section button:hover {
+            background-color: var(--hover-color);
+        }
 
-    .links a {
+        .links {
+            display: none;
+            padding: 1rem;
+        }
 
-  display: block;
+        .links a {
+            display: block;
+            padding: 0.8rem;
+            margin: 0.5rem 0;
+            background-color: var(--accent-color);
+            color: var(--text-light);
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color var(--transition-speed) ease;
+        }
 
-  font-size: 1rem;
+        .links a:hover {
+            background-color: var(--primary-color);
+        }
 
-  margin: 8px 0;
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            text-align: center;
+        }
 
-  padding: 10px;
+        footer {
+            background-color: rgba(0,0,0,0.2);
+            padding: 1.5rem;
+            text-align: center;
+        }
 
-  text-decoration: none;
+        #toggleThemeButton {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 1000;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: transform var(--transition-speed) ease;
+        }
 
-  color: var(--theme-dark-text);
-  
+        #toggleThemeButton:hover {
+            transform: rotate(180deg);
+        }
 
-  border-radius: 6px;
+        .hidden {
+            display: none;
+        }
 
-  transition: all 0.3s ease-in-out;
-
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
-
-}
-
-    .links a:hover {
-  transform: translateY(-3px);
-}
-
-
-footer {
-  color: #FFD700;
-}
-
-footer a {
-  color: #FFB700;
-  text-decoration: underline; /* Optional: removes underline */
-}
-
-footer a:hover {
-  color: #FFA000; /* Optional: changes color when hovered */
-}
-
-
-#toggleThemeButton {
-  position: fixed;
-  top: 15px;
-  right: 15px;
-  padding: 10px;
-  font-size: 1.2rem;
-  background-color: #17202A;
-  color: var(--theme-dark-text);
-  border: none;
-  border-radius: 50%;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-  cursor: pointer;
-  transition: background 0.3s ease;
-  z-index: 1000; /* Ensure it's on top */
-}
-
-    #toggleThemeButton:hover {
-      background-color: #17202A;
-      color: white;
-    }
-
-    @keyframes fadeOut {
-      from {
-        opacity: 1;
-      }
-      to {
-        opacity: 0;
-      }
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-    }
-  </style>
+        @media (max-width: 600px) {
+            .section {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
-  <button id="toggleThemeButton" onclick="toggleTheme()">🌙</button>
+    <a href="#main-content" class="skip-link" style="position: absolute; top: -40px; left: 0; background: black; color: white; padding: 8px; z-index: 100;">Skip to main content</a>
+    
+    <button id="toggleThemeButton" aria-label="Toggle Theme" onclick="toggleTheme()">🌙</button>
 
-  <header>
-    <h1>Belal Amr's Developments</h1>
-    <div class="logo-container">
-      <img id="themeLogo" class="hidden" src="https://blogger.googleusercontent.com/img/a/AVvXsEiPLt1hB7SxxVP38W9ckVtry62D4e_DgDE1kN1vwV-KqBbDD_KK8vyaMD-gxL9Kh_QzHjVTv9Hat3O1xGV2SPxgb1s7h0TixFe-l1np_gd_chkV80v6PWKTg3ngKJPICzfMLzJyGJReq85xbWZWToS7UnecIMXndjqSBickq_dtijsr0ZSs7ybVI2QSRT8=w1684-h1069-p-k-no-nu">
-      <img id="defaultLogo" src="https://blogger.googleusercontent.com/img/a/AVvXsEhqAvT_vRn0HsBqWdBAZNwnKtDZscBH6IYekigFaqn8_3UrRV2mBJzip55pQmRHWPRwwTAZJA33Qni_PfBO7rDJ4UYVlsEm7fwqKBPKz4OhE1N6JKufd98NlsddxJQ8325rdZwTpzjxgZVdHOKmbphESxqxxyD4nVzQqx8Oe273zfcGMVbuGEiJWc4QkfM">
-    </div>
-  </header>
+    <header>
+        <h1>Belal Amr's Web Development</h1>
+        <div class="logo-container" aria-label="Profile Logo">
+            <img id="themeLogo" class="hidden" src="https://blogger.googleusercontent.com/img/a/AVvXsEiPLt1hB7SxxVP38W9ckVtry62D4e_DgDE1kN1vwV-KqBbDD_KK8vyaMD-gxL9Kh_QzHjVTv9Hat3O1xGV2SPxgb1s7h0TixFe-l1np_gd_chkV80v6PWKTg3ngKJPICzfMLzJyGJReq85xbWZWToS7UnecIMXndjqSBickq_dtijsr0ZSs7ybVI2QSRT8=w1684-h1069-p-k-no-nu" alt="Theme Logo">
+            <img id="defaultLogo" src="https://blogger.googleusercontent.com/img/a/AVvXsEhqAvT_vRn0HsBqWdBAZNwnKtDZscBH6IYekigFaqn8_3UrRV2mBJzip55pQmRHWPRwwTAZJA33Qni_PfBO7rDJ4UYVlsEm7fwqKBPKz4OhE1N6JKufd98NlsddxJQ8325rdZwTpzjxgZVdHOKmbphESxqxxyD4nVzQqx8Oe273zfcGMVbuGEiJWc4QkfM" alt="Default Logo">
+        </div>
+    </header>
 
-  <nav>
-    <div class="section">
-      <button onclick="toggleLinks('games')">Games</button>
-      <div class="links" id="games">
-        <a href="https://belalamrmohamed.github.io/GuessTheWord/" target="_blank">Guess the Word</a>
-        <a href="https://belalamrmohamed.github.io/GuessTheNumber/" target="_blank">Guess the Number</a>
-        <a href="https://belalamrmohamed.github.io/RockpaperScissors/" target="_blank">Rock Paper Scissors</a>
-      </div>
-    </div>
-    <div class="section">
-      <button onclick="toggleLinks('calculators')">Calculators</button>
-      <div class="links" id="calculators">
-        <a href="https://belalamrmohamed.github.io/BelalAmr/" target="_blank">Numbering Systems</a>
-      </div>
-    </div>
-    <div class="section">
-      <button onclick="toggleLinks('ciphers')">Ciphers</button>
-      <div class="links" id="ciphers">
-        <a href="https://belalamrmohamed.github.io/AllCiphers/" target="_blank">All Ciphers</a>
-        <a href="https://belalamrmohamed.github.io/caesar-cypher/" target="_blank">Caesar Cipher</a>
-        <a href="https://belalamrmohamed.github.io/playfair-cypher/" target="_blank">Playfair Cipher</a>
-        <a href="https://belalamrmohamed.github.io/Row-Transposition/" target="_blank">Row Transposition Cipher</a>
-        <a href="https://belalamrmohamed.github.io/Rail-fence-cypher/" target="_blank">Rail Fence Cipher</a>
-      </div>
-    </div>
-  </nav>
+    <nav>
+        <div class="section">
+            <button onclick="toggleLinks('games')" aria-expanded="false" aria-controls="games-links">Games</button>
+            <div class="links" id="games">
+                <a href="https://belalamrmohamed.github.io/GuessTheWord/" target="_blank" rel="noopener noreferrer">Guess the Word</a>
+                <a href="https://belalamrmohamed.github.io/GuessTheNumber/" target="_blank" rel="noopener noreferrer">Guess the Number</a>
+                <a href="https://belalamrmohamed.github.io/RockpaperScissors/" target="_blank" rel="noopener noreferrer">Rock Paper Scissors</a>
+            </div>
+        </div>
+        <div class="section">
+            <button onclick="toggleLinks('calculators')" aria-expanded="false" aria-controls="calculators-links">Calculators</button>
+            <div class="links" id="calculators">
+                <a href="https://belalamrmohamed.github.io/BelalAmr/" target="_blank" rel="noopener noreferrer">Numbering Systems</a>
+            </div>
+        </div>
+        <div class="section">
+            <button onclick="toggleLinks('ciphers')" aria-expanded="false" aria-controls="ciphers-links">Ciphers</button>
+            <div class="links" id="ciphers">
+                <a href="https://belalamrmohamed.github.io/AllCiphers/" target="_blank" rel="noopener noreferrer">All Ciphers</a>
+                <a href="https://belalamrmohamed.github.io/caesar-cypher/" target="_blank" rel="noopener noreferrer">Caesar Cipher</a>
+                <a href="https://belalamrmohamed.github.io/playfair-cypher/" target="_blank" rel="noopener noreferrer">Playfair Cipher</a>
+                <a href="https://belalamrmohamed.github.io/Row-Transposition/" target="_blank" rel="noopener noreferrer">Row Transposition Cipher</a>
+                <a href="https://belalamrmohamed.github.io/Rail-fence-cypher/" target="_blank" rel="noopener noreferrer">Rail Fence Cipher</a>
+            </div>
+        </div>
+    </nav>
 
-  <main>
-    <h2>I will keep developing more sites.</h2>
-    <p></p>
-  </main>
+    <main id="main-content">
+        <section>
+            <h2>Continuous Development</h2>
+            <p>Exploring innovative technologies and creating dynamic web solutions with passion and precision.</p>
+        </section>
+    </main>
 
-<footer>
-    <p>&copy; 2024 Belal Amr. All rights reserved.    <a href="https://belalamrmohamed.github.io/License/" target="_blank">License</a> </p>
-  </footer>
+    <footer>
+        <p>&copy; 2024 𝕭𝖊𝖑𝖆𝖑 𝕬𝖒𝖗. All rights reserved. <a href="https://belalamrmohamed.github.io/License/" target="_blank" rel="noopener noreferrer">License</a></p>
+    </footer>
 
-  <script>
-    function toggleTheme() {
-      const body = document.body;
-      const toggleButton = document.getElementById('toggleThemeButton');
-      const themeLogo = document.getElementById('themeLogo');
-      const defaultLogo = document.getElementById('defaultLogo');
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            const toggleButton = document.getElementById('toggleThemeButton');
+            const themeLogo = document.getElementById('themeLogo');
+            const defaultLogo = document.getElementById('defaultLogo');
 
-      body.classList.toggle('light-theme');
-      toggleButton.textContent = body.classList.contains('light-theme') ? '☀️' : '🌙';
+            body.classList.toggle('light-theme');
+            toggleButton.textContent = body.classList.contains('light-theme') ? '☀' : '🌙';
 
-      if (body.classList.contains('light-theme')) {
-        defaultLogo.classList.add('hidden');
-        themeLogo.classList.remove('hidden');
-      } else {
-        themeLogo.classList.add('hidden');
-        defaultLogo.classList.remove('hidden');
-      }
-    }
-
-    function toggleLinks(id) {
-      const allLinks = document.querySelectorAll('.links');
-      allLinks.forEach(section => {
-        if (section.id !== id) {
-          section.style.display = 'none';
+            if (body.classList.contains('light-theme')) {
+                defaultLogo.classList.add('hidden');
+                themeLogo.classList.remove('hidden');
+            } else {
+                themeLogo.classList.add('hidden');
+                defaultLogo.classList.remove('hidden');
+            }
         }
-      });
-      const currentSection = document.getElementById(id);
-      currentSection.style.display = currentSection.style.display === 'block' ? 'none' : 'block';
-    }
-  </script>
+
+        function toggleLinks(id) {
+            const allLinks = document.querySelectorAll('.links');
+            const currentSection = document.getElementById(id);
+            const currentButton = document.querySelector(`button[aria-controls="${id}-links"]`);
+
+            allLinks.forEach(section => {
+                if (section.id !== id) {
+                    section.style.display = 'none';
+                    section.previousElementSibling.setAttribute('aria-expanded', 'false');
+                }
+            });
+
+            const isCurrentVisible = currentSection.style.display === 'block';
+            currentSection.style.display = isCurrentVisible ? 'none' : 'block';
+            currentButton.setAttribute('aria-expanded', (!isCurrentVisible).toString());
+        }
+
+        // Keyboard accessibility for buttons
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('keydown', (event) => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    button.click();
+                }
+            });
+        });
+    </script>
 </body>
 </html>
