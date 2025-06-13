@@ -1,0 +1,58 @@
+{
+  "id": "/portfolio/",
+  "name": "Belal's Developments",
+  "short_name": "Portfolio",
+  "description": "A collection of web tools and games created by Belal Amr Mohamed.",
+  "lang": "en",
+  "dir": "ltr",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["standalone", "window-controls-overlay", "browser"],
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "orientation": "any",
+
+  "icons": [
+    {
+      "src": "images/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "images/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "images/screenshot-mobile.png",
+      "sizes": "540x720",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Mobile view of portfolio"
+    },
+    {
+      "src": "images/screenshot-desktop.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Desktop view of portfolio"
+    }
+  ],
+
+  "categories": ["portfolio", "development", "games"],
+  "related_applications": [
+    {
+      "platform": "web",
+      "url": "https://belalamrmohamed.github.io/Belal/"
+    }
+  ],
+  "prefer_related_applications": false,
+  "version": "1.0.0",
+  "author": {
+    "name": "Belal Amr Mohamed",
+    "url": "https://belalamrmohamed.github.io/portfolio/"
+  }
+}
