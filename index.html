@@ -6,13 +6,21 @@
     <title>Belal Amr | Web Developer Portfolio</title>
     <meta
       name="description"
-      content="Portfolio of Belal Amr - Web Developer, showcasing projects, games, calculators, and ciphers."
+      content="Portfolio of Belal Amr - Web Developer specializing in interactive web applications, games, and cryptographic tools."
     />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="manifest" href="site.webmanifest" />
     <link rel="icon" href="images/icon-512x512.png" type="image/jpeg" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
   </head>
   <body>
+    <button id="toggleThemeButton" aria-label="Toggle dark/light mode">
+      🌙
+    </button>
+
     <header>
       <div class="logo-container" aria-label="Profile Logo">
         <img
@@ -28,123 +36,239 @@
     </header>
 
     <nav>
-      <a href="#projects">Projects</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+      <a href="#projects"><i class="fas fa-code"></i> Projects</a>
+      <a href="#skills"><i class="fas fa-cogs"></i> Skills</a>
+      <a href="#about"><i class="fas fa-user"></i> About</a>
+      <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
       <a
         href="https://belalamrmohamed.github.io/License/"
         target="_blank"
         rel="noopener noreferrer"
-        >License</a
+        ><i class="fas fa-file-contract"></i> License</a
       >
     </nav>
 
     <main id="main-content">
       <section class="section" id="projects">
-        <h2>Featured Projects</h2>
+        <h2><i class="fas fa-code"></i> Featured Projects</h2>
         <div class="card-list">
           <div class="card">
+            <div class="card-icon"><i class="fas fa-gamepad"></i></div>
             <h3>Guess the Word</h3>
             <p>A fun word guessing game built with JavaScript.</p>
-            <a
-              href="https://belalamrmohamed.github.io/GuessTheWord/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Play Now</a
-            >
+            <div class="card-footer">
+              <a
+                href="https://belalamrmohamed.github.io/GuessTheWord/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn"
+                >Play Now <i class="fas fa-external-link-alt"></i
+              ></a>
+            </div>
           </div>
+
           <div class="card">
+            <div class="card-icon"><i class="fas fa-calculator"></i></div>
             <h3>Numbering Systems Calculator</h3>
             <p>
               Convert numbers between binary, decimal, octal, and hexadecimal.
             </p>
-            <a
-              href="https://belalamrmohamed.github.io/NumberSystems/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Try Calculator</a
-            >
+            <div class="card-footer">
+              <a
+                href="https://belalamrmohamed.github.io/NumberSystems/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn"
+                >Try Calculator <i class="fas fa-external-link-alt"></i
+              ></a>
+            </div>
           </div>
+
           <div class="card">
+            <div class="card-icon"><i class="fas fa-lock"></i></div>
             <h3>All Ciphers</h3>
             <p>
               Explore classic ciphers: Caesar, Playfair, Row Transposition, Rail
               Fence, and more.
             </p>
-            <a
-              href="https://belalamrmohamed.github.io/AllCiphers/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Explore Ciphers</a
-            >
+            <div class="card-footer">
+              <a
+                href="https://belalamrmohamed.github.io/AllCiphers/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn"
+                >Explore Ciphers <i class="fas fa-external-link-alt"></i
+              ></a>
+            </div>
           </div>
+
           <div class="card">
+            <div class="card-icon"><i class="fas fa-key"></i></div>
             <h3>Rail Fence Cipher</h3>
             <p>Encrypt and decrypt messages using the Rail Fence cipher.</p>
-            <a
-              href="https://belalamrmohamed.github.io/Rail-fence-cypher/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Try Rail Fence</a
-            >
+            <div class="card-footer">
+              <a
+                href="https://belalamrmohamed.github.io/Rail-fence-cypher/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn"
+                >Try Rail Fence <i class="fas fa-external-link-alt"></i
+              ></a>
+            </div>
           </div>
+
           <div class="card">
+            <div class="card-icon"><i class="fas fa-random"></i></div>
             <h3>Row Transposition Cipher</h3>
             <p>
               Encrypt and decrypt messages using the Row Transposition cipher.
             </p>
-            <a
-              href="https://belalamrmohamed.github.io/Row-Transposition/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Try Row Transposition</a
-            >
+            <div class="card-footer">
+              <a
+                href="https://belalamrmohamed.github.io/Row-Transposition/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn"
+                >Try Row Transposition <i class="fas fa-external-link-alt"></i
+              ></a>
+            </div>
           </div>
+
           <div class="card">
+            <div class="card-icon"><i class="fas fa-chess-board"></i></div>
             <h3>Playfair Cipher</h3>
             <p>Encrypt and decrypt messages using the Playfair cipher.</p>
-            <a
-              href="https://belalamrmohamed.github.io/playfair-cypher/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Try Playfair</a
-            >
+            <div class="card-footer">
+              <a
+                href="https://belalamrmohamed.github.io/playfair-cypher/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn"
+                >Try Playfair <i class="fas fa-external-link-alt"></i
+              ></a>
+            </div>
           </div>
+
           <div class="card">
+            <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
             <h3>Caesar Cipher</h3>
             <p>Encrypt and decrypt messages using the Caesar cipher.</p>
-            <a
-              href="https://belalamrmohamed.github.io/caesar-cypher/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Try Caesar</a
-            >
+            <div class="card-footer">
+              <a
+                href="https://belalamrmohamed.github.io/caesar-cypher/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn"
+                >Try Caesar <i class="fas fa-external-link-alt"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="skills">
+        <h2><i class="fas fa-cogs"></i> Skills & Technologies</h2>
+        <div class="skills-container">
+          <div class="skill-category">
+            <h3>Frontend</h3>
+            <ul class="skills-list">
+              <li><i class="fab fa-html5"></i> HTML5</li>
+              <li><i class="fab fa-css3-alt"></i> CSS3</li>
+              <li><i class="fab fa-js"></i> JavaScript</li>
+              <li><i class="fab fa-react"></i> React</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>Backend</h3>
+            <ul class="skills-list">
+              <li><i class="fab fa-node-js"></i> Node.js</li>
+              <li><i class="fas fa-database"></i> MongoDB</li>
+              <li><i class="fas fa-server"></i> Express</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>Tools</h3>
+            <ul class="skills-list">
+              <li><i class="fab fa-git-alt"></i> Git</li>
+              <li><i class="fab fa-github"></i> GitHub</li>
+              <li><i class="fas fa-terminal"></i> CLI</li>
+            </ul>
           </div>
         </div>
       </section>
 
       <section class="section" id="about">
-        <h2>About Me</h2>
+        <h2><i class="fas fa-user"></i> About Me</h2>
         <p>
           Hi, I'm Belal Amr, a passionate web developer focused on building
           interactive, accessible, and innovative web applications. I enjoy
           solving problems and learning new technologies.
         </p>
+        <p>
+          My journey in web development began with a fascination for how things
+          work behind the scenes. This led me to explore various aspects of
+          programming, from game development to cryptographic algorithms.
+        </p>
+        <p>
+          When I'm not coding, you can find me learning about new technologies,
+          contributing to open-source projects, or working on personal coding
+          challenges.
+        </p>
       </section>
 
       <section class="section" id="contact">
-        <h2>Contact</h2>
+        <h2><i class="fas fa-envelope"></i> Contact</h2>
         <p>
-          Want to collaborate or have a question? <br />
-          <a href="mailto:belalamrmohamed@gmail.com"
-            >belalamrmohamed@gmail.com</a
-          >
+          Want to collaborate or have a question? I'd love to hear from you!
         </p>
+        <div class="contact-methods">
+          <a href="mailto:belalamrmohamed@gmail.com" class="contact-link">
+            <i class="fas fa-envelope"></i> belalamrmohamed@gmail.com
+          </a>
+          <div class="social-links">
+            <a
+              href="https://github.com/belalamrmohamed"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+            <a
+              href="https://linkedin.com/in/belalamr"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a
+              href="https://twitter.com/belalamr"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
+        </div>
       </section>
     </main>
 
     <footer>
-      <p>&copy; 2024 Belal Amr. All rights reserved.</p>
+      <div class="footer-content">
+        <p>
+          &copy; <span id="currentYear"></span> Belal Amr. All rights reserved.
+        </p>
+        <div class="footer-links">
+          <a href="#projects">Projects</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+          <a
+            href="https://belalamrmohamed.github.io/License/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >License</a
+          >
+        </div>
+      </div>
     </footer>
     <script src="js/main.js"></script>
   </body>

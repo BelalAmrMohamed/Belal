@@ -1,3 +1,4 @@
+// Theme toggle functionality
 function toggleTheme() {
   const body = document.body;
   const toggleButton = document.getElementById("toggleThemeButton");
@@ -5,11 +6,20 @@ function toggleTheme() {
   const defaultLogo = document.getElementById("defaultLogo");
 
   body.classList.toggle("light-theme");
-  toggleButton.textContent = body.classList.contains("light-theme")
-    ? "☀️"
-    : "🌙";
+  const isLightTheme = body.classList.contains("light-theme");
 
-  if (body.classList.contains("light-theme")) {
+  // Save theme preference to localStorage
+  localStorage.setItem("theme", isLightTheme ? "light" : "dark");
+
+  // Update button icon
+  toggleButton.textContent = isLightTheme ? "☀️" : "🌙";
+  toggleButton.setAttribute(
+    "aria-label",
+    isLightTheme ? "Switch to dark mode" : "Switch to light mode"
+  );
+
+  // Toggle logos
+  if (isLightTheme) {
     defaultLogo.classList.add("hidden");
     themeLogo.classList.remove("hidden");
   } else {
@@ -18,31 +28,73 @@ function toggleTheme() {
   }
 }
 
-function toggleLinks(id) {
-  const allLinks = document.querySelectorAll(".links");
-  const currentSection = document.getElementById(id);
-  const currentButton = document.querySelector(
-    `button[aria-controls="${id}-links"]`
-  );
+// Check for saved theme preference on load
+document.addEventListener("DOMContentLoaded", () => {
+  const savedTheme = localStorage.getItem("theme") || "dark";
+  const body = document.body;
+  const toggleButton = document.getElementById("toggleThemeButton");
 
-  allLinks.forEach((section) => {
-    if (section.id !== id) {
-      section.style.display = "none";
-      section.previousElementSibling.setAttribute("aria-expanded", "false");
-    }
+  if (savedTheme === "light") {
+    body.classList.add("light-theme");
+    toggleButton.textContent = "☀️";
+    document.getElementById("defaultLogo").classList.add("hidden");
+    document.getElementById("themeLogo").classList.remove("hidden");
+  } else {
+    toggleButton.textContent = "🌙";
+  }
+
+  // Set current year in footer
+  document.getElementById("currentYear").textContent = new Date().getFullYear();
+
+  // Initialize theme button
+  toggleButton.addEventListener("click", toggleTheme);
+
+  // Add smooth scrolling for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      const targetId = this.getAttribute("href");
+      if (targetId === "#") return;
+
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop - 20,
+          behavior: "smooth",
+        });
+
+        // Update URL without page jump
+        history.pushState(null, null, targetId);
+      }
+    });
   });
+});
 
-  const isCurrentVisible = currentSection.style.display === "block";
-  currentSection.style.display = isCurrentVisible ? "none" : "block";
-  currentButton.setAttribute("aria-expanded", (!isCurrentVisible).toString());
-}
-
-// Keyboard accessibility for links
-document.querySelectorAll("button").forEach((button) => {
-  button.addEventListener("keydown", (event) => {
+// Keyboard accessibility for interactive elements
+document.querySelectorAll("button, a[href]").forEach((element) => {
+  element.addEventListener("keydown", (event) => {
     if (event.key === "Enter" || event.key === " ") {
       event.preventDefault();
-      button.click();
+      element.click();
     }
   });
+});
+
+// Intersection Observer for animations
+const observerOptions = {
+  threshold: 0.1,
+  rootMargin: "0px 0px -50px 0px",
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("animate");
+    }
+  });
+}, observerOptions);
+
+document.querySelectorAll(".section, .card").forEach((section) => {
+  observer.observe(section);
 });
