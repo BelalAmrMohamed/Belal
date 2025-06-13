@@ -107,7 +107,7 @@ nav {
 }
 
 nav a {
-  color: white;
+  color: rgb(0, 0, 0);
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(5px);
   padding: 0.8rem 1.8rem;
